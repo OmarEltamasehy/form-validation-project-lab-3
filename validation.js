@@ -7,6 +7,10 @@
         let gender   = document.getElementsByName('gender');
         let country  = document.getElementById('country')
         
+        let errors = document.getElementById('errors')
+
+
+
         function validate(){
             list = []
             if(pass.value.length < 8){
@@ -27,6 +31,8 @@
             }
             
             console.log(list);
+            errors.innerText = list
+            errors.style.color = 'red'
         } 
 
         btn.addEventListener('click' , validate);
